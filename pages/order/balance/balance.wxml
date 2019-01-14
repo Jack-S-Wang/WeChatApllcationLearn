@@ -1,0 +1,54 @@
+<!--pages/order/balance/balance.wxml-->
+<view>
+  <view class='top-bar'>
+    <label class='top-left-label'>取餐时间</label>
+    <label class='top-right-label activity-color'>饮品制作中，尽快为你服务</label>
+  </view>
+  <!--订单详情-->
+  <view class='order-info'>
+    <view class='order-info-title'>订单详情</view>
+     <scroll-view scroll-y="{{scrollEnable}}" style="height:{{scrollHeight}}px;"> 
+      <view class='cart-list-box' wx:for="{{cartList}}" wx:key="unique">
+        <view class='list-info'>
+          <view>{{item.name}}</view>
+          <view class='list-info-size info-fontcolor'>{{item.detail}}</view>
+        </view>
+        <view style='width:50%;padding:10px;'>
+          <view style='float:right'>
+            <view class='info-fontcolor'>x {{item.number}}</view>
+            <view>¥ {{item.sum}}.00</view>
+          </view>
+        </view>
+      </view>
+     </scroll-view> 
+      <view class='order-cut' wx:if="{{cutMonney!=0}}">
+        <label class='order-cut-dec'>减</label>
+        <label class='order-cut-note' wx:if="{{cutMonney==3}}">满20元立减3元</label>
+        <label class='order-cut-note' wx:if="{{cutMonney==10}}">满50元立减10元</label>
+        <label class='order-cut-number activity-color'>-¥ {{cutMonney}}.00</label>
+      </view>
+      <view class='aggregate-info'>
+        <label class='aggregate-info-font'>总计</label>
+        <label class='aggregate-info-number activity-color'>￥ {{sumMonney}}</label>
+      </view> 
+  </view>
+  <view class='info-all'>
+    <view class='info-all-font'>
+      <label class='info-fontcolor'>备注</label>
+      <textarea class='info-all-text' placeholder='默认常温，常规糖，如有口味要求，请输入备注'></textarea>
+    </view>
+  </view>
+  <!--底部购物清单支付-->
+  <view class='pay-bottom'>
+    <view class='pay-bottom-icon'>
+      <icon class='iconfont icon-gouwuchefill pay-icon'>
+        <label class='pay-bottom-font' >{{cupNumber}}</label>
+      </icon>
+      <label class='pay-bottom-number'>￥ {{sumMonney-cutMonney}}.00</label>
+    </view>
+    <view class='pay-bottom-pay'>
+      <label class='pay-bottom-payTo' bindtap='payFor'>确认下单</label>
+    </view>
+  </view>
+</view>
+

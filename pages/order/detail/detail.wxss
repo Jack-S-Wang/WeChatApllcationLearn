@@ -1,0 +1,101 @@
+/* pages/order/detail/detail.wxss */
+page{
+  background: #F8F8F8;
+}
+.topOrder{
+  padding: 15px 50px;
+  width:75%;
+  display: flex;
+}
+.topOrder-one{
+  padding: 30px 15px;
+  background-color: #DE5F4B;
+  width: 5%;
+  height:80px;
+  float:left;
+}
+.topOrder-one-font{
+  color: white;
+  font-size:15px;
+}
+.topOrder-two{
+  height: 80px;
+  width:73%;
+  float: right;
+  background-color: #FEF9F4;
+  padding:30px 15px;
+}
+.topOrder-two-fontOne{
+  color:balck;
+  font-size:30px;
+  float:left;
+}
+.topOrder-two-fontTwo{
+  color:#FFA035;
+  font-size:12px;
+  position: absolute;
+  top:60px;
+  left:200px;
+  z-index: 1;
+}
+.topOrder-two-fontThree{
+  color:#ABB9B8;
+  font-size:14px;
+  position: absolute;
+  top:100px;
+  left:110px;
+  z-index: 1;
+}
+.order-backgroundColor{
+  background: white;
+}
+.orderInfo-lab{
+  border-bottom:1px #F7F7F7 solid;
+  color: #D7D7D7;
+  font-size:14px;
+  padding:15px;
+}
+.orderInfo-details{
+  padding:10px 15px;
+  border-bottom:1px #F7F7F7 solid;
+  display: flex;
+}
+.orderInfo-detailOne{
+  width:50%;
+  float:left;
+  font-size:15px;
+}
+.orderInfo-detailTwo{
+  width: 50%;
+  float: right;
+  font-size: 15px;
+}
+.total{
+  padding: 10px 15px;
+  margin-bottom:10px;
+  display: flex;
+  font-size:15px; 
+}
+.total-one{
+  width: 50%;
+  height: 30px;
+}
+.total-two{
+  width: 50%;
+  color:#FFA035;
+  height:30px;
+}
+.order-Info{
+  margin-top:10px;
+  font-size:14px;
+  color:#D7D7D7;
+}
+.bottomInfo{
+  margin:15px 70px;
+  text-align: center;
+}
+.bottomInfo-lab{
+  color:#FFA035;
+  font-size: 16px;
+  border:1px #FFA035 solid;
+}

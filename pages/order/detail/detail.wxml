@@ -1,0 +1,62 @@
+<!--pages/order/detail/detail.wxml-->
+<view>
+  <view class='topOrder'>
+    <view class='topOrder-one'>
+      <label class='topOrder-one-font'>取餐号</label>
+    </view>
+    <view class='topOrder-two'>
+      <label class='topOrder-two-fontOne'>C097</label>
+      <label class='topOrder-two-fontTwo'>制作中</label>
+      <label class='topOrder-two-fontThree'>饮品制作中，尽快为你服务</label>
+    </view>
+  </view>
+  <!--订单详情-->
+  <view>
+    <view class='orderInfo-lab order-backgroundColor'>
+      <label>订单详情</label>
+    </view>
+      <scroll-view scroll-y='{{scrollEnable}}' style='height:{{scrollHeight}}px;' >
+        <view class='orderInfo-details order-backgroundColor' wx:for='{{cartList}}' wx:key='unique'>
+          <view class='orderInfo-detailOne'>
+            <view>{{item.name}}</view>
+            <view style='font-size:12px;color:#C5B2B3;'>{{item.detail}}</view>
+          </view>
+          <view class='orderInfo-detailTwo'>
+            <view style="float:right;">
+              <view style='color:#C5B2B3;'>x {{item.number}}</view>
+              <view >￥ {{item.sum}}.00</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+      <!--总计-->
+      <view class='total order-backgroundColor'>
+        <view class='total-one'>总计</view>
+        <view class='total-two'>
+          <view style='float:right;padding:0px 20px;'>
+          <view>
+            ￥ {{sumMonney}}
+          </view>
+          </view>
+        </view>
+      </view>
+  </view>
+    <!--订单信息-->
+    <view class='order-Info order-backgroundColor'>
+      <view style='border-bottom:1px #F7F7F7 solid;padding:15px;'>
+          订单信息
+      </view>
+      <view style='border-bottom:1px #F7F7F7 solid;padding:15px;display:flex;'>
+        <view style='width:20%;'>订单号码</view>
+        <label style="color:black;width:80%;float:right;">WD1257327542816</label>
+      </view>
+      <view style='border-bottom:1px #F7F7F7 solid;padding:15px;display:flex;'>
+        <view style='width:20%;'>订单时间</view>
+        <view style="color:black;width:80%;">{{sureTime}}</view>
+      </view>
+    </view>
+    <!--底部信息-->
+    <view class='bottomInfo'>
+      <view class='bottomInfo-lab'>请凭此画面至取餐柜台领取饮料</view>
+    </view>
+</view>

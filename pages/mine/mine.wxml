@@ -1,0 +1,23 @@
+<!--pages/mine/mine.wxml-->
+<view>
+  <view class='topUser'>
+    <view style='padding:0px 87px;'>
+      <image src='{{avatarUrl}}' class='img-style' ></image>
+    </view>
+    <view style='padding:0px 45px;'>
+      <label class='lab-style' >{{userName}}</label>
+    </view>
+  </view>
+<view class='dataInfo'>
+  <view>
+    <view class='dataInfo-one'>
+      <i class="iconfont icon-youhuiquan" style="color:#FF9C35"></i>
+      <label style='padding-left:20px;font-size:14px;'>我收到的支付返券</label>
+    </view>
+  </view>
+</view>
+<view class='bottomInfo'>
+  <view class='bottomInfo-one'>客户电话：1268323</view>
+  <view class='bottomInfo-two'>服务时间：早上9:00-晚上9:00</view>
+</view>
+</view>
